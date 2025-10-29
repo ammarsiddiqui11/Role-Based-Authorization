@@ -1,0 +1,27 @@
+# Dependency Caches
+/node_modules
+/vendor
+/.venv
+
+# Compiled/Build Artifacts
+/dist
+/build
+/target
+*.o
+*.pyc
+
+# Logs and Temp Files
+*.log
+npm-debug.log
+*.tmp
+/temp/
+
+# IDE and OS Files
+.DS_Store             # macOS
+Thumbs.db             # Windows
+/.idea/               # JetBrains IDEs
+/.vscode/             # VS Code
+
+# Environment and Secrets
+.env
+.env.local
