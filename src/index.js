@@ -1,5 +1,10 @@
-const express = require('express')
-const dontenv = require('dotenv').config()
+import express from 'express'
+import dotenv from 'dotenv'
+import dbConnect from './config/dbConnect.js'
+import route from './routes/route.js'
+import userRoutes from './routes/userRoutes.js'
+dotenv.config()
+dbConnect()
 
 const app = express()
 
@@ -7,7 +12,8 @@ const app = express()
 app.use(express.json())
 
 // routes
-
+app.use('/api/auth', route )
+app.use('/api/users', userRoutes)
 // server
 const PORT = process.env.PORT || 3000
 
